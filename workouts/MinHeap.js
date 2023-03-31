@@ -21,7 +21,6 @@ class MinHeap{
         }
     }
 
-
     deleteMin(){
         this.heap[0] = this.heap.pop()
         let i=0
@@ -51,11 +50,40 @@ class MinHeap{
         return this.heap[0]
     }
 
-
-
     levelOrder(heap){
-        
+        let q = [0]
+        let list = ''
+        while(q.length){
+            let curr = q.shift()
+            list+=`${heap[curr]} `
+            let left = 2*curr+1
+            let right = 2*curr+2
+            if(heap[left]){
+                q.push(left)
+            }
+            if(heap[right]){
+                q.push(right)
+            }
+        }
+        console.log(list);
     }
+
+    buildHeap(arr){
+        // build heap
+        this.heap = arr
+        for(let i=Math.floor((arr.length-1)/2); i>=0; i--){
+            this.siftDown(i,arr.length-1)
+        }
+
+        //To Sort in Descending Order
+        for(let i =arr.length-1; i>0; i--){
+            [this.heap[0], this.heap[i]] = [this.heap[i], this.heap[0]]
+            this.siftDown(0,i)
+        }
+    }
+
+    
+
 
 }
 
@@ -69,7 +97,7 @@ const m = new MinHeap()
     m.insert(5)
     m.insert(20)
 
-//Deletion
+// Deletion
 
     m.deleteMin()
     console.log(m.heap)
@@ -77,4 +105,10 @@ const m = new MinHeap()
 // Get Min Value from heap
     console.log(m.getMin())
 
+// Build ANd SORT Min Heap
+
+    m.buildHeap([10,5,8,3,1,1,2])
+
+// BFS
+    m.levelOrder(m.heap)
 
