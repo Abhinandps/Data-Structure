@@ -11,7 +11,7 @@ class PriorityQueue {
     leftChildIndex(i) {
         return 2 * i + 1
     }
-    
+
     rightChildIndex(i) {
         return 2 * i + 2
     }
@@ -66,6 +66,12 @@ class PriorityQueue {
         }
     }
 
+    changePriority(heap,value,newPriority){
+        let element = heap.find(item=>item.value === value)
+        element.priority = newPriority
+        heap.sort((a,b)=>a.priority-b.priority)
+    }
+
 
     levelOrder(heap){
         let q =[0]
@@ -100,20 +106,27 @@ const pq = new PriorityQueue()
 
 // Priority Insertion
 
-    pq.enqueue("Task 1", 3)
+    pq.enqueue("Task 1", 2)
     pq.enqueue("Task 2", 1)
     pq.enqueue("Task 3", 2)
-    pq.enqueue("Task 4", 0)
+    pq.enqueue("Task 4", 1)
 
 // Priority Deletion
 
-    console.log(pq.dequeue()); // Task 2
-    console.log(pq.dequeue()); // Task 3
-    console.log(pq.dequeue()); // Task 1
+    // console.log(pq.dequeue()); // Task 2
+    // console.log(pq.dequeue()); // Task 3
+    // console.log(pq.dequeue()); // Task 1
+    // console.log(pq.dequeue()); // Task 1
 
 // pq.levelOrder(pq.heap)
 
-console.log(pq.getMin()); // Task 1
+    console.log(pq.getMin()); // Task 1
+
+// Change Priority Of heap
+    pq.changePriority(pq.heap,"Task 3",4)
+    pq.changePriority(pq.heap,"Task 2",1)
+    pq.changePriority(pq.heap,"Task 1",2)
+    pq.changePriority(pq.heap,"Task 4",3)
 
 
 console.log(pq.heap); // [{ value: 'Task 1'}, priority:3 }]
