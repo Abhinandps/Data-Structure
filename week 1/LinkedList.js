@@ -39,7 +39,53 @@ class LinkedList {
         }
         this.size++
     }
+
+
+    duplicate(){
+        let temp = this.head
+        while(temp){
+            let curr = temp
+            while(curr.next != null){
+                if(curr.value === curr.next.value){
+                    curr.next = curr.next.next
+                }
+                else{
+                    curr = curr.next
+                }
+                 temp = temp.next
+            }
+            console.log(curr);
+
+        }
+    }
+
+    print(){
+        let curr = this.head
+        let list = ''
+        while(curr){
+            list+=` ${curr.value}`
+            curr = curr.next
+        }
+        console.log(list);
+
+    }
 }
+
+const list = new LinkedList()
+
+list.addNode(5)
+list.addNode(15)
+list.addNode(15)
+
+list.addNode(25)
+list.addNode(25)
+list.addNode(25)
+list.addNode(25)
+list.addNode(25)
+
+list.duplicate()
+
+list.print()
 
 
 
