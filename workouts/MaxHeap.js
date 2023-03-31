@@ -8,6 +8,10 @@ class MaxHeap{
     insert(value){
         this.heap.push(value)
         let i = this.heap.length-1
+        this.heapifyUp(i)
+    }
+
+    heapifyUp(i){
         while(i>0){
             let parentIndex = Math.floor((i-1)/2)
             if(this.heap[i] > this.heap[parentIndex]){
