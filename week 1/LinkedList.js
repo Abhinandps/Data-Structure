@@ -6,7 +6,7 @@
 class Node{
     constructor(value){
         this.value = value
-        this.next = next
+        this.next = null
     }
 }
 
@@ -74,16 +74,27 @@ class LinkedList {
 const list = new LinkedList()
 
 list.addNode(5)
-list.addNode(15)
-list.addNode(15)
+list.addNode(1)
+list.addNode(10)
+list.addNode(5)
+list.addNode(10)
 
-list.addNode(25)
-list.addNode(25)
-list.addNode(25)
-list.addNode(25)
-list.addNode(25)
+list.addNode(11)
 
-list.duplicate()
+list.addNode(12)
+
+
+
+// list.addNode(15)
+// list.addNode(15)
+
+// list.addNode(25)
+// list.addNode(25)
+// list.addNode(25)
+// list.addNode(25)
+// list.addNode(25)
+
+// list.duplicate()
 
 list.print()
 
