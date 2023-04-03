@@ -118,19 +118,35 @@ class BT{
         }
         return root
     }
+
+    mirror(root){
+        if(root === null){
+            return null
+        }
+        let left = this.mirror(root.left)
+        let right =  this.mirror(root.right)
+
+        root.left = right
+        root.right = left
+        return root
+    }
+
 }
 
 
 
 const bt = new BT()
-bt.insert(bt.root, 10)
-bt.insert(bt.root, 20)
-bt.insert(bt.root, 30)
-bt.insert(bt.root, 40)
-bt.insert(bt.root, 50)
+bt.insert(bt.root, 1)
+bt.insert(bt.root, 2)
+bt.insert(bt.root, 3)
+bt.insert(bt.root, 4)
+bt.insert(bt.root, 5)
+bt.insert(bt.root, 6)
+bt.insert(bt.root, 7)
 
 // Delete Node From Binary Tree
-    bt.delete(10)
+    // bt.delete(10)
+   bt.mirror(bt.root);
 
 // BFS Traversal
     bt.levelOrder()
