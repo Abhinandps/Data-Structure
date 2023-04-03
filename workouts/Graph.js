@@ -98,6 +98,17 @@ class Graph {
         })
         return foundPath
     }
+
+    countEdges() {
+        let numEdges = 0;
+        for (let vertex in this.adjacentList) {
+          numEdges += this.adjacentList[vertex].size;
+        }
+        // Divide by 2 since each edge is counted twice (once for each vertex)
+        return numEdges / 2;
+      }
+
+      
 }
 
 
@@ -113,6 +124,7 @@ const h = new Graph()
 
     h.addEdges("A", "B")
     h.addEdges("B", "C")
+    h.addEdges("A", "C")
     // h.addEdges("A", "A")
 
 
@@ -138,3 +150,7 @@ const h = new Graph()
     h.dfs("A");
 
     console.log(h.hasPath("A","C"));
+
+    console.log(h.countEdges());
+
+    h.display()
