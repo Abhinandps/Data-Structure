@@ -1,0 +1,98 @@
+
+What is a Tree ?
+
+    A tree is a widely used data structure that represents a hierarchical structure, similar to a real-life tree, with a root node at the top and branches emanating from it. Each node in a tree can have zero or more child nodes, but only one parent node.
+
+What is Binary Tree 
+
+    A binary tree is a special type of tree where each node has at most two child nodes, referred to as the left and right child nodes. If a node has no children, it is referred to as a leaf node.
+
+    Operations
+
+        Insertion - adding a new element to the tree. [ O(h) t ] worst case [ O(n) t] [  O(1) s] [ O(n) s ]
+        Deletion - removing an element from the tree. [ O(h) t ] worst case [ O(n) t] [  O(1) s] [ O(n) s ]
+        Searching - finding a specific element in the tree. [ O(h) t ] worst case [ O(n) t] [  O(1) s] 
+        Traversal - visiting every node in the tree exactly once.  worst case [ O(n) t] 
+            inorder,preOrder,postOrder - [  O(h) s]
+            levelOrder - [ O(n) s ]
+
+        Applications
+            > Data Storage ( file system , family tree )
+            > sorting algorithm ( heap sort )
+
+
+What is Binary Search Tree?
+
+    A binary search tree (BST) is a type of binary tree that is organized in such a way that the value of the left child node is always less than the value of the parent node, and the value of the right child node is always greater than the value of the parent node. This property enables efficient searching, insertion, and deletion of elements in the tree.
+
+    Operations
+
+        " O(log n) for a balanced tree and O(n) for an unbalanced tree "
+
+         Insertion: O(log n) in the average case and O(n) in the worst case.
+
+         Deletion: O(log n) in the average case and O(n) in the worst case.
+
+         Searching: O(log n) in the average case and O(n) in the worst case.
+
+         Traversal: inorder, preorder, and postorder  is O(n), 
+
+
+         Applications
+
+            > Database Indexing
+
+            > Binary Heap
+
+            > Network routing: BSTs can be used to efficiently route packets in a network. Each node in the tree        represents a network destination, and the key of the node is the destination address
+
+
+What is Heap
+
+    A heap is a data structure that is used to efficiently implement priority queues. It is a complete binary tree where each node is greater than or equal to its children, in the case of a max heap, or less than or equal to its children, in the case of a min heap.
+
+    Insertion : O (log n)
+    Deletion : O (log n)
+    Find Max/Min : O(1)
+
+
+    Priority Queue : A priority queue is an abstract data type that stores a collection of elements, each of which has an associated priority value. Elements with higher priority values are dequeued before elements with lower priority values.
+
+    Enqueue: Insert an element into the priority queue with an associated priority value.
+
+    Dequeue: Remove and return the element with the highest priority value.
+
+    Peek: Return the element with the highest priority value without removing it.
+
+
+    Applications
+
+        > Priority Queue
+        > Heap sort
+        > Memory Management - Dynamic Memory Allocation
+        
+
+What is Trie
+
+    Trie (also known as Prefix Tree or Digital Tree) is a tree-like data structure used to efficiently store and search for strings. In a Trie, each node represents a single character, and the path from the root node to a particular node represents a string formed by concatenating the characters corresponding to the nodes on the path. The nodes in a Trie can have multiple children, each representing a possible next character in the string.
+
+    The main operations supported by a Trie are:
+
+    Insertion: Insert a new string into the Trie.|| string Length m , O(m) t O(m) s
+
+    Search: Search for a string in the Trie. || O(m) t , O(1) s
+
+    Prefix Search: Find all strings in the Trie that have a given prefix. || O( k + s) , k = given prefix of length ,
+    s = no.of strings
+
+    Deletion: Remove a string from the Trie. || O(m) t, O(1) s
+
+        Applications
+            > Spell Checker
+            > auto-completion
+            > searching for subString
+
+
+What is Graph
+
+        
