@@ -93,6 +93,32 @@ What is Trie
             > searching for subString
 
 
-What is Graph
+What is Graph ?
 
-        
+        A graph is a data structure used to represent a collection of interconnected nodes or vertices, 
+        along with the edges or links that connect them.
+
+        Applications of Depth First Search
+                1) Detecting cycle in a graph 
+                2) Path Finding 
+                3) Topological Sorting 
+                4) To test if a graph is bipartite 
+                5) Finding Strongly Connected Components of a graph 
+                6) Solving puzzles with only one solution,
+                7) Backtracking: Depth-first search can be used in backtracking algorithms.
+
+        Applications of Breadth First Traversal
+                1) Shortest Path 
+                2) Peer to Peer Networks
+                3) Social Networking Websites
+                4) In Garbage Collection
+                5) Path Finding 
+                6) Image processing
+
+        Applications Of Graph
+                1) Google maps
+                2) In Facebook, users are considered to be the vertices and if they are friends then there is 
+                   an edge running between them
+                3) In World Wide Web, web pages are considered to be the vertices. There is an edge from a page u
+                   to other page v if there is a link of page v on page u.
+                        
