@@ -17,6 +17,13 @@ Time complexity is a function describing the amount of time an algorithm takes i
 
 * Asymptotic notation is a way to describe the running time or space complexity of an algorithm based on the input size. It is commonly used in complexity analysis to describe how an algorithm performs as the size of the input grows. The three most commonly used notations are Big O, Omega, and Theta.
 
+1. Big O notation (O):
+2. Big Theta notation (Θ):
+3. Big omega notation(ω):
+
+
+
+https://www.geeksforgeeks.org/types-of-asymptotic-notations-in-complexity-analysis-of-algorithms/?ref=lbp
 
 
 
