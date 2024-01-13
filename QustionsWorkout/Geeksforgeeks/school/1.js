@@ -68,3 +68,29 @@ class Solution{
 
 // Expected Time Complexity: O(N)
 // Expected Auxiliary Space: O(1)
+
+// -------------------------------------------------
+
+// Print alternate elements of an array
+// ========================================
+
+
+class Solution {
+    print(arr,n){
+        let result = ''
+        for(let i=0; i<n; i += 2){
+            result += arr[i] + ' ';
+        }
+        console.log(result.trim());
+    }
+  }
+  
+  
+//   Input:
+// N = 5
+// A[] = {1, 2, 3, 4, 5}
+// Output:
+// 1 3 5
+
+// Expected Time Complexity: O(n)
+// Expected Auxiliary Space: O(1)
