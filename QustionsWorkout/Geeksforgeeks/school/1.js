@@ -84,7 +84,7 @@ class Solution {
         console.log(result.trim());
     }
   }
-  
+
   
 //   Input:
 // N = 5
@@ -94,3 +94,27 @@ class Solution {
 
 // Expected Time Complexity: O(n)
 // Expected Auxiliary Space: O(1)
+
+// -------------------------------------------------------
+
+// Print 1 To N Without Loop
+// ===============================
+
+
+class Solution{
+    constructor(){
+        this.result = '';
+    }
+    
+    printNos(N){
+       this.printRecursive(1,N);
+       console.log(this.result.trim());
+    }
+    
+    printRecursive(start, end){
+        if(start <= end){
+            this.result += start + ' '
+            this.printRecursive(start+1, end)
+        }
+    }
+}
