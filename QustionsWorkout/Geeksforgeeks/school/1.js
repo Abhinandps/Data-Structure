@@ -132,7 +132,7 @@ class Solution {
     }
     
      PalinArray(arr,n){
-         //code here
+
          for(let i=0; i<n; i++){
              
              let originalNumber = arr[i];
@@ -167,5 +167,35 @@ class Solution {
 //  Space O(1) constant amount of extra space regardless of the size of the input array.
 
 
+// -------------------------------------------------------------------------
+
+// Print the pattern | Set-1
+// =========================
+
+// For N = 3 the pattern will be 
+// 3 3 3 2 2 2 1 1 1
+// 3 3 2 2 1 1
+// 3 2 1
+
+
+
+class Solution {
+    printPat(n){
+        
+      let result =''
+      for (let i = n; i >= 1; i--) { 
+          for (let j = n; j >= 1; j--) {
+              for (let k = i; k >= 1; k--) { 
+                  result += j +' '
+              }
+          }
+          result+='$'
+      }
+      console.log(result)
+    }
+  }
+
+
+//   TIME O(n^3)
 
 
