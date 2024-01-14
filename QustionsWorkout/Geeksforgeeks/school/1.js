@@ -118,3 +118,54 @@ class Solution{
         }
     }
 }
+
+// ------------------------------------------------------------------
+
+// Palindromic Array
+// =========================
+
+
+class Solution {
+    
+    constructor(){
+         this.isPalindrom = true;
+    }
+    
+     PalinArray(arr,n){
+         //code here
+         for(let i=0; i<n; i++){
+             
+             let originalNumber = arr[i];
+             let temp = originalNumber;
+             let reversedNumber = 0;
+             
+             // reverse the number
+             while(temp>0){
+                 const digit = temp % 10;
+                 reversedNumber = reversedNumber * 10 + digit 
+                 temp = Math.floor(temp/10);
+             }
+             
+             // check if the original number is equal to it's revers
+             if(originalNumber !== reversedNumber){
+                 this.isPalindrom = false;
+                 break;
+             }
+         }
+         
+         // check if entire array element is palindrom then return 1
+         if(this.isPalindrom){
+             return 1
+         }
+         
+         return 0
+     }
+ }
+
+
+//  Time O(n*m) n - number of elements in Array. m - number of digits
+//  Space O(1) constant amount of extra space regardless of the size of the input array.
+
+
+
+
