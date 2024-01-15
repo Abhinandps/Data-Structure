@@ -45,6 +45,7 @@ const bruteForce = (array) => {
 
 // Kadane's Algorithm
 // ========================
+
 // initialize kadane's algorithm function that takes array as an input 
 // returns integer which is the maximum subarray sum.
 const kadanesAlgorithm = (array) => {
@@ -72,3 +73,9 @@ const newArray = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 const maximumSum = kadanesAlgorithm(newArray);
 
 console.log(maximumSum); // the result is 6 
+
+
+
+
+
+
