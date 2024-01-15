@@ -232,3 +232,45 @@ class Solution {
     }
 }
 
+// -----------------------------------------------------------
+
+// Find the median
+// ==============
+
+// Example 1:
+
+// Input: N = 5
+// arr[] = 90 100 78 89 67
+// Output: 89
+// Explanation: After sorting the array 
+// middle element is the median 
+
+// Example 2:
+
+// Input: N = 4
+// arr[] = 56 67 30 79
+// Output: 61
+// Explanation: In case of even number of 
+// elements, average of two middle elements 
+// is the median.
+
+
+class Solution {
+
+    find_median(arr){
+        arr.sort((a,b)=> a - b);
+        
+        // calculate the median
+        const n = arr.length;
+        if(n % 2 === 1){
+            // odd length
+            return arr[Math.floor(n / 2)]
+        }else{
+            // Even Length
+            const middle1 = arr[n / 2 - 1]
+            const middle2 = arr[n / 2]
+            return Math.floor((middle1 + middle2) / 2);
+        }
+    }
+}
+
