@@ -1,4 +1,22 @@
+// Binary Search
 
+var search = function(nums, target) {
+    return BinarySearch(nums,target,0,nums.length-1)
+};
+
+function BinarySearch(nums,target,start,end){
+    if(start > end){
+        return -1
+    }
+    let middle = Math.floor((start+end) / 2);
+    if(nums[middle] === target){
+        return middle
+    }else if(nums[middle] > target){
+        return BinarySearch(nums,target,start,middle-1)
+    }else{
+        return BinarySearch(nums,target,middle+1,end)
+    }
+}
 
 // Binary Search Missing Number
 
