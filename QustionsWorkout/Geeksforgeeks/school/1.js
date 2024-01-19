@@ -274,3 +274,20 @@ class Solution {
     }
 }
 
+// Armstrong Numbers
+// ======================
+
+// Time Space - O(1)
+
+
+
+class Solution{
+    armstrongNumber(n){
+        const dig1 = Math.floor(n/100)
+        const dig2 = Math.floor((n%100)/10)
+        const dig3 = Math.floor(n%10)
+        
+        const sum = Math.pow(dig1,3) + Math.pow(dig2,3) + Math.pow(dig3,3)
+        return sum === n ? "Yes": "No"
+    }
+}
