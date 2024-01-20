@@ -291,3 +291,30 @@ class Solution{
         return sum === n ? "Yes": "No"
     }
 }
+
+// Check for Binary
+// ================
+
+
+// Example 1:
+
+// Input:
+// str = 101
+// Output:
+// 1
+// Explanation:
+// Since string contains only 0 and 1, output is 1.
+
+
+class Solution{
+    isBinary(str){
+        for(let i=0; i<str.length;i++){
+            if(str[i] !== '0' && str[i] !== '1'){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
