@@ -1,4 +1,4 @@
-// Sum of Series
+// 1. Sum of Series
 // =================
 /*
 
@@ -32,7 +32,7 @@ class Solution {
 
 // ------------------------------------------------------------------
 
-// Value equal to index value
+//2.  Value equal to index value
 // ===========================
 
 /*
@@ -71,7 +71,7 @@ class Solution{
 
 // -------------------------------------------------
 
-// Print alternate elements of an array
+// 3. Print alternate elements of an array
 // ========================================
 
 
@@ -97,7 +97,7 @@ class Solution {
 
 // -------------------------------------------------------
 
-// Print 1 To N Without Loop
+// 4. Print 1 To N Without Loop
 // ===============================
 
 
@@ -121,7 +121,7 @@ class Solution{
 
 // ------------------------------------------------------------------
 
-// Palindromic Array
+// 5. Palindromic Array
 // =========================
 
 
@@ -169,7 +169,7 @@ class Solution {
 
 // -------------------------------------------------------------------------
 
-// Print the pattern | Set-1
+// 6. Print the pattern | Set-1
 // =========================
 
 // For N = 3 the pattern will be 
@@ -200,7 +200,7 @@ class Solution {
 
 // ----------------------------------------------------------
 
-// Count Digits
+// 7. Count Digits
 // ===============
 
 // Given a number N. Count the number of digits in N which evenly divide N.
@@ -234,7 +234,7 @@ class Solution {
 
 // -----------------------------------------------------------
 
-// Find the median
+// 8. Find the median
 // ==============
 
 // Example 1:
@@ -274,7 +274,7 @@ class Solution {
     }
 }
 
-// Armstrong Numbers
+// 9. Armstrong Numbers
 // ======================
 
 // Time Space - O(1)
@@ -292,7 +292,7 @@ class Solution{
     }
 }
 
-// Check for Binary
+// 10 . Check for Binary
 // ================
 
 
@@ -317,4 +317,33 @@ class Solution{
     }
 }
 
+// -----------------------------------------------------------
 
+// 11. Count of smaller elements
+// =========================
+
+// Given an sorted array A of size N. Find number of elements which are less than or equal to given element X.
+
+// Link : https://www.geeksforgeeks.org/problems/count-of-smaller-elements5947/1?page=1&difficulty=School&sortBy=submissions
+
+/*
+--------------
+pseduo code
+--------------
+
+function countElementsLessThanOrEqualToX(A,n,x):
+    start = 0
+    end = n-1
+    result = -1
+
+    while start<=end:
+        mid = (start+end)/2
+
+        if A[mid] <= x:
+            result = mid
+            start = mid + 1
+        else:
+            end = mid - 1
+    return result + 1
+
+*/
