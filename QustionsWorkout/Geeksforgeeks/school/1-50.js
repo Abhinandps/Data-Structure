@@ -7,7 +7,7 @@ Write a program to find the sum of the given series 1+2+3+ . . . . . .(N terms)
 Example 1:
 
 Input:
-N = 1
+N = 1                    
 Output: 1
 Explanation: For n = 1, sum will be 1.
 Example 2:
@@ -19,7 +19,7 @@ Explanation: For n = 5, sum will be 15.
 1 + 2 + 3 + 4 + 5 = 15.
 */
 
-// output 
+// output                                                       
 
 class Solution {
     seriesSum(n) {
@@ -347,3 +347,17 @@ function countElementsLessThanOrEqualToX(A,n,x):
     return result + 1
 
 */
+// 12. Sum of Array
+// ===============
+
+// Given an integer array Arr[] of size N. The task is to find sum of it.
+
+class Solution {
+    sum(arr,n) {
+        let total =0;
+        for(let i=0; i<n; i++){
+            total+=arr[i]
+        }
+        return total;
+    }
+}
