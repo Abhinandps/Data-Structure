@@ -372,3 +372,16 @@ class Solution {
 //         System.out.println("Hello World");
 //     }
 // }
+
+
+// 14. Print Elements of Array
+
+class Solution {
+    printArray(arr, n) {
+        let result=''
+        for(const el of arr ){
+            result+=el+' '
+        }
+        console.log(result)
+    }
+}
