@@ -361,3 +361,14 @@ class Solution {
         return total;
     }
 }
+
+/*
+
+13. Java Hello world
+*/
+
+// class Solution{
+//     static void printHelloWorld(){
+//         System.out.println("Hello World");
+//     }
+// }
