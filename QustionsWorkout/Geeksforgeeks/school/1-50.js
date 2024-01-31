@@ -385,3 +385,12 @@ class Solution {
         console.log(result)
     }
 }
+
+// 15. Palindrome
+
+class Solution{
+    is_palindrome(n){
+        const num_str = n.toString()
+        return num_str === num_str.split('').reverse().join('') ? 'Yes' : 'No'
+    }
+}
